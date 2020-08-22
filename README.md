@@ -15,12 +15,13 @@ After receiving the user stories, I had to come up with a design for the UI. I t
 
 As for the backend, I learned about the MVC and MVVM design patterns, and the trade offs between the two. I understood the reasoning behind why DOT choose to follow MVVM, which I followed for the UMS microservice. 
 
-### Implementation
-
-
+### Features
+User features include the following:  User Filter, User Search, and User Details (includes a user's Info, Functions, Function Groups, Features, and Last Logins). 
+User Group features including the following:  User Group Filter, User Group Search, and User Group Details (Users and Function Group Cards). Each Function Group Card has a source description, status, and a list of functions and a list of routes belonging to that function group.
+Login, logout and user session expiry. 
 
 ### Thoughts
-I really enjoy creating the project from scratch and seeing how the workflow between the user management frontend and microservice backend. Scaffolding the database models, creating complex sql / link joins, and writing the controllers using a technology and language I haven't used before (.Net Core and C#) to create a whole project in just over a month is an extremely gratifying feeling. 
+I really enjoy creating the project from scratch and seeing how the workflow between the user management frontend and microservice backend. Scaffolding the database models, creating complex sql / link joins, and writing the controllers using a technology and language I haven't used before (.Net Core and C#) to create a whole project in a month and a half is an extremely gratifying feeling. 
 
 As for the frontend, while I've used React before, I never used React hooks. This project showed me the benefits of React hooks (including more modular code and reduced syntax). I also became much more familiarized with organizing code and using Redux and thunks. 
 
