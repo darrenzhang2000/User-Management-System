@@ -2,7 +2,7 @@
 Note: since this code is proprietary, I'm cannot to disclose the source code. 
 
 However, I am happy to share the experience I've had while building this project as well as images of the completed product.
-Images can found [here](https://github.com/darrenzhang2000/User-Management-System/blob/master/UMS.pdf). 
+### Images of the User Management System can found [here](https://github.com/darrenzhang2000/User-Management-System/blob/master/UMS.pdf). 
 
 ### Stack
 I used React, Redux and Material UI for the user interface and .Net Core and C# for the microservice.
