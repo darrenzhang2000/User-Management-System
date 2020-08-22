@@ -5,7 +5,7 @@ However, I am happy to share the experience I've had while building this project
 ## Images of the User Management System can found at [UMS.pdf](https://github.com/darrenzhang2000/User-Management-System/blob/master/UMS.pdf). 
 
 ### Stack
-I used React, Redux and Material UI for the user interface and .Net Core and C# for the microservice.
+I used React, Redux and Material UI for the user interface and .Net Core, C#, and SQL for the microservice.
 
 ### Motivation
 Because New York City Department of Transportation is a huge company with many teams and employees, managing the permissions of each employee can be a daunting task, especially if you have to manually create SQL queries to add/remove a user to/from a user group, give him permission to certain API endpoints, keep track of all function groups a user group has as well as each function and each route in a function group. This user management system streamlines this process in addition to giving user managers access to a specific user / user group's details as well as filter users and user groups based on user/user group id, loginId, name, department, last login, status, and source system. The current User Management System manages 147 users and 25 user groups for the PRISM  team.
@@ -14,6 +14,15 @@ Because New York City Department of Transportation is a huge company with many t
 After receiving the user stories, I had to come up with a design for the UI. I took out my notespad, and sketched several prototypes and laying out each component before confirming with my mentor and choosing a design. Since I knew that I would be working with React for the frontend it easy for me to visualize the general code structure. Of course, this is after understanding DOT's coding conventions and structures and comforming to these styles.
 
 As for the backend, I learned about the MVC and MVVM design patterns, and the trade offs between the two. I understood the reasoning behind why DOT choose to follow MVVM, which I followed for the UMS microservice. 
+
+I used Redux to manage the state of the application and Material UI to style the components. 
+
+### Code Structure
+Frontend: Features are organized into components and containers, where each containers contains thunk calls, action dispatches and manages the React lifecycle and components contain little to no logic. State is managed by the Redux store. All axios API calls are abstracted into thunks. Styles can be found in styled components, which are injected into containers using high ordered functions. React-Route is used to keep tract of different urls.
+
+Backend: There are 5 controllers (User, UserGroup, UserGroupUser, FunctionGroup, and HtmlHelper). This contains the high level inferface of the API endpoints. 
+All controller endpoints have business logic, and the business logic, including the SQL / LINQ queries and complex joins is stored in the modules folder.
+The results of the SQL queries are stored in custom created models (rather than scaffolded models- this is bececause rather it's more secure to expose only the data I want rather than all the data in a table). 
 
 ### Features
 User features include the following:  User Filter, User Search, and User Details (includes a user's Info, Functions, Function Groups, Features, and Last Logins). 
